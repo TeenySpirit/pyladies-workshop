@@ -51,3 +51,5 @@ def zamien_imiona_na_nazwiska_ze_sciezki(sciezka_imion, sciezka_nazwisk):
 
 lista_ze_sciezek = zamien_imiona_na_nazwiska_ze_sciezki("lista_imion.txt", "lista_nazwisk.txt")
 print(lista_ze_sciezek)
+
+imie = 'Dorota'
