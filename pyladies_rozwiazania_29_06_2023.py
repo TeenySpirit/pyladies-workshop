@@ -101,6 +101,7 @@ def iterowanie_po_kluczach_slownika(dictionary):
 
 print(iterowanie_po_kluczach_slownika(slownik))
 
+
 for klucz, wartosc in slownik.items():
     print(f"Klucz:{klucz}")
     print(f"Wartość:{wartosc}")
