@@ -53,3 +53,57 @@ lista_ze_sciezek = zamien_imiona_na_nazwiska_ze_sciezki("lista_imion.txt", "list
 print(lista_ze_sciezek)
 
 imie = 'Dorota'
+
+#11_tuples
+
+waluty = ('PLN', 'USD')
+#waluty.remove('PLN')
+#nie da się zmieniać tupli
+
+waluty_lista = []
+
+def tuple_to_list(tuple, list):
+    for currency in tuple:
+        list.append(currency)
+    return list
+
+print(tuple_to_list(waluty, waluty_lista))
+
+#list comprehension zamiast linii 66 i 67:
+#list = [currency for currency in tuple]
+
+
+# 12_prawda_i_falsz
+
+try:
+    liczba = int(input("Podaj liczbę:"))
+    print(f"Twoja liczba to {liczba}!")
+except ValueError:
+    print("Nie podawaj liczby innej niż całkowita.")
+
+#13_slowniki
+
+def zwroc_wartosc_pod_kluczem(slownik, klucz):
+    try:
+        return slownik[klucz]
+    except KeyError:
+        print("Prosze podac klucz, ktory jest w slowniku.")
+
+slownik = {'drzewo' : 'klon', 'budynek' : 'kamienica'}
+klucz = 'kwiat'
+zwrocona_wartosc = zwroc_wartosc_pod_kluczem(slownik, klucz)
+print(zwrocona_wartosc)
+
+
+def iterowanie_po_kluczach_slownika(dictionary):
+    for slownik_key in dictionary:
+        return slownik.keys()
+
+print(iterowanie_po_kluczach_slownika(slownik))
+
+for klucz, wartosc in slownik.items():
+    print(f"Klucz:{klucz}")
+    print(f"Wartość:{wartosc}")
+
+
+
